@@ -19,5 +19,9 @@ public class DemoApplicationTests {
 		System.out.println("heoo---------------------");
 
 	}
+	@Test
+	public void testMaven(){
+		System.out.println("---19890727---");
+	}
 
 }
