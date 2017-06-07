@@ -23,6 +23,10 @@ public class DemoForTest {
         user.setPassword("1989");
         usermap.put(user.getUsername(),user);
         System.out.println("the output:"+Map.Entry.class);
+    }
+
+    @Test
+    public void testMessage(){
 
     }
 
