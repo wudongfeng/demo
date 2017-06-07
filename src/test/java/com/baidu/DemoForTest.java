@@ -1,6 +1,8 @@
 package com.baidu;
 
+import com.baidu.constants.ApiKey;
 import com.baidu.domain.User;
+import com.baidu.util.TokenUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,7 +28,18 @@ public class DemoForTest {
     }
 
     @Test
-    public void testMessage(){
+    public void testJWT(){
+        String id="wdf";
+        String issuer="baidu";
+        String subject="com";
+        long ttlMillis=1993984994;
+        String key=TokenUtils.createJWT(id,issuer,subject,ttlMillis);
+        System.out.println("-----this is to secret-----");
+        System.out.println(key);
+        System.out.println();
+        System.out.println("-----this is pares---------");
+        TokenUtils.parseJWT(key);
+
 
     }
 
